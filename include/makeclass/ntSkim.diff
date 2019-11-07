@@ -1,0 +1,136 @@
+3c3
+< // Thu Mar  1 17:34:48 2018 by ROOT version 6.02/13
+---
+> // Mon Feb 26 17:54:19 2018 by ROOT version 6.02/13
+5c5
+< // found on file: Ds_phikkpi_pt4.root
+---
+> // found on file: Dntuple_finder_PbPb_1111.root_1104.root
+8,9c8,9
+< #ifndef ntSkimMC_class_h
+< #define ntSkimMC_class_h
+---
+> #ifndef ntSkim_class_h
+> #define ntSkim_class_h
+17c17
+< class ntSkimMC_class {
+---
+> class ntSkim_class {
+24a25
+>    Int_t           centrality_path;
+26a28,29
+>    Int_t           hltObj;
+>    Int_t           pcollisionEventSelection;
+33,40c36,42
+<    Int_t           pPAprimaryVertexFilter;
+<    Int_t           pBeamScrapingFilter;
+<    Int_t           pVertexFilterCutG;
+<    Int_t           pVertexFilterCutGloose;
+<    Int_t           pVertexFilterCutGtight;
+<    Int_t           pVertexFilterCutGplus;
+<    Int_t           pVertexFilterCutE;
+<    Int_t           pVertexFilterCutEandG;
+---
+>    Int_t           pprimaryVertexFilter;
+>    Int_t           phfCoincFilter1;
+>    Int_t           phfCoincFilter2;
+>    Int_t           phfCoincFilter3;
+>    Int_t           phfCoincFilter4;
+>    Int_t           phfCoincFilter5;
+>    Int_t           pclusterCompatibilityFilter;
+43a46
+>    TBranch        *b_centrality_path;   //!
+45a49,50
+>    TBranch        *b_hltObj;   //!
+>    TBranch        *b_pcollisionEventSelection;   //!
+52,59c57,63
+<    TBranch        *b_pPAprimaryVertexFilter;   //!
+<    TBranch        *b_pBeamScrapingFilter;   //!
+<    TBranch        *b_pVertexFilterCutG;   //!
+<    TBranch        *b_pVertexFilterCutGloose;   //!
+<    TBranch        *b_pVertexFilterCutGtight;   //!
+<    TBranch        *b_pVertexFilterCutGplus;   //!
+<    TBranch        *b_pVertexFilterCutE;   //!
+<    TBranch        *b_pVertexFilterCutEandG;   //!
+---
+>    TBranch        *b_pprimaryVertexFilter;   //!
+>    TBranch        *b_phfCoincFilter1;   //!
+>    TBranch        *b_phfCoincFilter2;   //!
+>    TBranch        *b_phfCoincFilter3;   //!
+>    TBranch        *b_phfCoincFilter4;   //!
+>    TBranch        *b_phfCoincFilter5;   //!
+>    TBranch        *b_pclusterCompatibilityFilter;   //!
+62,63c66,67
+<    ntSkimMC_class(TTree *tree=0);
+<    virtual ~ntSkimMC_class();
+---
+>    ntSkim_class(TTree *tree=0);
+>    virtual ~ntSkim_class();
+75,76c79,80
+< #ifdef ntSkimMC_class_cxx
+< ntSkimMC_class::ntSkimMC_class(TTree *tree) : fChain(0) 
+---
+> #ifdef ntSkim_class_cxx
+> ntSkim_class::ntSkim_class(TTree *tree) : fChain(0) 
+81c85
+<       TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("Ds_phikkpi_pt4.root");
+---
+>       TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("Dntuple_finder_PbPb_1111.root_1104.root");
+83c87
+<          f = new TFile("Ds_phikkpi_pt4.root");
+---
+>          f = new TFile("Dntuple_finder_PbPb_1111.root_1104.root");
+91c95
+< ntSkimMC_class::~ntSkimMC_class()
+---
+> ntSkim_class::~ntSkim_class()
+97c101
+< Int_t ntSkimMC_class::GetEntry(Long64_t entry)
+---
+> Int_t ntSkim_class::GetEntry(Long64_t entry)
+103c107
+< Long64_t ntSkimMC_class::LoadTree(Long64_t entry)
+---
+> Long64_t ntSkim_class::LoadTree(Long64_t entry)
+116c120
+< void ntSkimMC_class::Init(TTree *tree)
+---
+> void ntSkim_class::Init(TTree *tree)
+131a136
+>    fChain->SetBranchAddress("centrality_path", &centrality_path, &b_centrality_path);
+133a139,140
+>    fChain->SetBranchAddress("hltObj", &hltObj, &b_hltObj);
+>    fChain->SetBranchAddress("pcollisionEventSelection", &pcollisionEventSelection, &b_pcollisionEventSelection);
+140,147c147,153
+<    fChain->SetBranchAddress("pPAprimaryVertexFilter", &pPAprimaryVertexFilter, &b_pPAprimaryVertexFilter);
+<    fChain->SetBranchAddress("pBeamScrapingFilter", &pBeamScrapingFilter, &b_pBeamScrapingFilter);
+<    fChain->SetBranchAddress("pVertexFilterCutG", &pVertexFilterCutG, &b_pVertexFilterCutG);
+<    fChain->SetBranchAddress("pVertexFilterCutGloose", &pVertexFilterCutGloose, &b_pVertexFilterCutGloose);
+<    fChain->SetBranchAddress("pVertexFilterCutGtight", &pVertexFilterCutGtight, &b_pVertexFilterCutGtight);
+<    fChain->SetBranchAddress("pVertexFilterCutGplus", &pVertexFilterCutGplus, &b_pVertexFilterCutGplus);
+<    fChain->SetBranchAddress("pVertexFilterCutE", &pVertexFilterCutE, &b_pVertexFilterCutE);
+<    fChain->SetBranchAddress("pVertexFilterCutEandG", &pVertexFilterCutEandG, &b_pVertexFilterCutEandG);
+---
+>    fChain->SetBranchAddress("pprimaryVertexFilter", &pprimaryVertexFilter, &b_pprimaryVertexFilter);
+>    fChain->SetBranchAddress("phfCoincFilter1", &phfCoincFilter1, &b_phfCoincFilter1);
+>    fChain->SetBranchAddress("phfCoincFilter2", &phfCoincFilter2, &b_phfCoincFilter2);
+>    fChain->SetBranchAddress("phfCoincFilter3", &phfCoincFilter3, &b_phfCoincFilter3);
+>    fChain->SetBranchAddress("phfCoincFilter4", &phfCoincFilter4, &b_phfCoincFilter4);
+>    fChain->SetBranchAddress("phfCoincFilter5", &phfCoincFilter5, &b_phfCoincFilter5);
+>    fChain->SetBranchAddress("pclusterCompatibilityFilter", &pclusterCompatibilityFilter, &b_pclusterCompatibilityFilter);
+152c158
+< Bool_t ntSkimMC_class::Notify()
+---
+> Bool_t ntSkim_class::Notify()
+163c169
+< void ntSkimMC_class::Show(Long64_t entry)
+---
+> void ntSkim_class::Show(Long64_t entry)
+170c176
+< Int_t ntSkimMC_class::Cut(Long64_t entry)
+---
+> Int_t ntSkim_class::Cut(Long64_t entry)
+177c183
+< #endif // #ifdef ntSkimMC_class_cxx
+---
+> #endif // #ifdef ntSkim_class_cxx

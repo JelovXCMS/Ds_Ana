@@ -1,0 +1,1 @@
+dasgoclient -query="dataset=/Ds_NonPrompt_f0980kkpi_pp/*/* instance=prod/phys03"

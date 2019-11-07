@@ -1,0 +1,21 @@
+build filelist by 
+
+ls /mnt/hadoop/store/user/chengchi/Ds_phikkpi_18220/pp_MC/Ds_phikkpi_pp/MC_pp_Ds_phikkpi_pt4/180225_003140/0000/* >filelistname_lis.txt
+
+
+replace /mnt/hadoop/ by  root://xrootd.rcac.purdue.edu/   to let hastead able to reach the file
+:1,$s/\/mnt\/hadoop/root:\/\/xrootd.rcac.purdue.edu\//gc
+use sed to do all in once
+sed -i 's/\/mnt\/hadoop/root:\/\/xrootd.rcac.purdue.edu\//g' *filename*
+
+sed -i 's/user\/jisun/group\/hi\/chengchi/g' *filename*
+
+
+
+replace the folderPath & filelistname_lis.txt
+delete extra folder info in file
+
+
+1 or more files missing in HIMB5 & HIMB6 & HIMB7 (need to regenerate file list 180228)
+
+

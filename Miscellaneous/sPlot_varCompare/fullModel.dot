@@ -1,0 +1,29 @@
+digraph model{
+"model" [ color=red, label="RooAddPdf
+model"];
+"zModel" [ color=red, label="RooGaussian
+zModel"];
+"invMass" [ color=blue, label="RooRealVar
+invMass"];
+"mZ" [ color=blue, label="RooRealVar
+mZ"];
+"sigmaZ" [ color=blue, label="RooRealVar
+sigmaZ"];
+"zYield" [ color=blue, label="RooRealVar
+zYield"];
+"qcdModel" [ color=red, label="RooExponential
+qcdModel"];
+"qcdMassDecayConst" [ color=blue, label="RooRealVar
+qcdMassDecayConst"];
+"qcdYield" [ color=blue, label="RooRealVar
+qcdYield"];
+"qcdModel" -> "invMass";
+"qcdModel" -> "qcdMassDecayConst";
+"zModel" -> "invMass";
+"zModel" -> "mZ";
+"zModel" -> "sigmaZ";
+"model" -> "zYield";
+"model" -> "qcdYield";
+"model" -> "qcdModel";
+"model" -> "zModel";
+}

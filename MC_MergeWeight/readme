@@ -1,0 +1,30 @@
+To get Merge sample , run 1,(2a),2b,1.  (2a) is independet of sample but dependt with FONLL & Raa.
+
+
+
+
+1. MC_MergeGenSamplePtWeight.C :  merge different pt & pthat threshold sample with weight, also add pz weight (for PbPb)
+	a. inputs: A merged file, 
+						 A list of unmerged files (to calculate the sample merge weight)
+						 File with FONLL weight , at FONLL/output folder, this weight has to be updated after recreate the merge file with weight.
+
+
+
+2. FONLL weight : at /FONLL/ folder, 
+
+	a. readFONLL.C : intput : FONLL distribution for prompt D0 & B (.txt files) , mt scaling to generate Prompt Ds
+                         Raa assumptions 
+							  output : FONLL.root , include FONLL distribution and Raa
+
+	b. getFONLL.C : input : FONLL.root & merged root file with weight from 1.
+                  output : FONLLweight
+
+
+
+
+
+
+
+
+//2. MC_FONLLDataWeight.C : add FONLL & Data Weight 
+

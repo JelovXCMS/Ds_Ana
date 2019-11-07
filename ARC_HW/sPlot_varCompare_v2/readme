@@ -1,0 +1,14 @@
+
+1. for DdlErr scale scan use :
+
+	run_fit_plot_smear2.sh
+
+	Fit_sideband_onlySave.C
+
+	DdlErrScaleScan.C
+	
+ 	plots result : plots_smear/
+
+	root result : DdlErrScaleOut/
+
+

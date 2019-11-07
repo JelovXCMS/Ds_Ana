@@ -1,0 +1,171 @@
+void Draw_h_ori_6h_new_6()
+{
+//=========Macro generated from canvas: 6/6
+//=========  (Wed Apr 11 18:26:28 2018) by ROOT version6.02/13
+   TCanvas *6 = new TCanvas("6", "6",0,0,600,600);
+   gStyle->SetOptStat(0);
+   gStyle->SetOptTitle(0);
+   6->Range(-2.142857,-0.09524427,12.14286,0.5397176);
+   6->SetFillColor(0);
+   6->SetBorderMode(0);
+   6->SetBorderSize(0);
+   6->SetTickx(1);
+   6->SetTicky(1);
+   6->SetLeftMargin(0.15);
+   6->SetRightMargin(0.15);
+   6->SetTopMargin(0.15);
+   6->SetBottomMargin(0.15);
+   6->SetFrameLineColor(0);
+   6->SetFrameBorderMode(0);
+   6->SetFrameLineColor(0);
+   6->SetFrameBorderMode(0);
+   
+   TH1F *h_ori_631 = new TH1F("h_ori_631","Dsize_ori",20,0,10);
+   h_ori_631->SetBinContent(1,0.3703944);
+   h_ori_631->SetBinContent(3,0.3646594);
+   h_ori_631->SetBinContent(5,0.1373154);
+   h_ori_631->SetBinContent(7,0.05908132);
+   h_ori_631->SetBinContent(9,0.03219174);
+   h_ori_631->SetBinContent(11,0.01590651);
+   h_ori_631->SetBinContent(13,0.009035329);
+   h_ori_631->SetBinContent(15,0.005464481);
+   h_ori_631->SetBinContent(17,0.003624953);
+   h_ori_631->SetBinContent(19,0.002326462);
+   h_ori_631->SetBinContent(21,0.004436509);
+   h_ori_631->SetBinError(1,0.004476576);
+   h_ori_631->SetBinError(3,0.004441785);
+   h_ori_631->SetBinError(5,0.00272567);
+   h_ori_631->SetBinError(7,0.001787882);
+   h_ori_631->SetBinError(9,0.001319733);
+   h_ori_631->SetBinError(11,0.0009276864);
+   h_ori_631->SetBinError(13,0.0006991748);
+   h_ori_631->SetBinError(15,0.0005437362);
+   h_ori_631->SetBinError(17,0.0004428585);
+   h_ori_631->SetBinError(19,0.0003547822);
+   h_ori_631->SetBinError(21,0.0004899305);
+   h_ori_631->SetMinimum(0);
+   h_ori_631->SetMaximum(0.4444733);
+   h_ori_631->SetEntries(18565);
+   h_ori_631->SetStats(0);
+   h_ori_631->SetFillColor(1);
+   h_ori_631->SetFillStyle(0);
+
+   Int_t ci;      // for color index setting
+   TColor *color; // for color definition with alpha
+   ci = TColor::GetColor("#000082");
+   h_ori_631->SetLineColor(ci);
+   h_ori_631->SetLineStyle(0);
+
+   ci = TColor::GetColor("#000082");
+   h_ori_631->SetMarkerColor(ci);
+   h_ori_631->SetMarkerStyle(20);
+   h_ori_631->GetXaxis()->SetLabelFont(43);
+   h_ori_631->GetXaxis()->SetLabelOffset(0.01);
+   h_ori_631->GetXaxis()->SetLabelSize(20);
+   h_ori_631->GetXaxis()->SetTitleSize(25);
+   h_ori_631->GetXaxis()->SetTitleOffset(1.5);
+   h_ori_631->GetXaxis()->SetTitleFont(43);
+   h_ori_631->GetYaxis()->SetLabelFont(43);
+   h_ori_631->GetYaxis()->SetLabelOffset(0.01);
+   h_ori_631->GetYaxis()->SetLabelSize(20);
+   h_ori_631->GetYaxis()->SetTitleSize(25);
+   h_ori_631->GetYaxis()->SetTitleOffset(1.7);
+   h_ori_631->GetYaxis()->SetTitleFont(43);
+   h_ori_631->GetZaxis()->SetLabelFont(43);
+   h_ori_631->GetZaxis()->SetLabelSize(20);
+   h_ori_631->GetZaxis()->SetTitleSize(25);
+   h_ori_631->GetZaxis()->SetTitleFont(43);
+   h_ori_631->Draw("E1");
+   
+   TH1F *h_new_632 = new TH1F("h_new_632","Dsize_new",20,0,10);
+   h_new_632->SetBinContent(1,0.3672986);
+   h_new_632->SetBinContent(3,0.3593297);
+   h_new_632->SetBinContent(5,0.1428976);
+   h_new_632->SetBinContent(7,0.06021285);
+   h_new_632->SetBinContent(9,0.03238378);
+   h_new_632->SetBinContent(11,0.01778676);
+   h_new_632->SetBinContent(13,0.009066629);
+   h_new_632->SetBinContent(15,0.005575515);
+   h_new_632->SetBinContent(17,0.003426763);
+   h_new_632->SetBinContent(19,0.002021858);
+   h_new_632->SetBinContent(21,0.004761876);
+   h_new_632->SetBinError(1,0.004466704);
+   h_new_632->SetBinError(3,0.004258467);
+   h_new_632->SetBinError(5,0.002470248);
+   h_new_632->SetBinError(7,0.001440211);
+   h_new_632->SetBinError(9,0.00103653);
+   h_new_632->SetBinError(11,0.0007568068);
+   h_new_632->SetBinError(13,0.0004876689);
+   h_new_632->SetBinError(15,0.0003737851);
+   h_new_632->SetBinError(17,0.0002983009);
+   h_new_632->SetBinError(19,0.0002051595);
+   h_new_632->SetBinError(21,0.0003025971);
+   h_new_632->SetEntries(37398);
+   h_new_632->SetStats(0);
+   h_new_632->SetFillColor(1);
+   h_new_632->SetFillStyle(0);
+
+   ci = TColor::GetColor("#87ec76");
+   h_new_632->SetLineColor(ci);
+   h_new_632->SetLineStyle(0);
+
+   ci = TColor::GetColor("#87ec76");
+   h_new_632->SetMarkerColor(ci);
+   h_new_632->SetMarkerStyle(20);
+   h_new_632->GetXaxis()->SetLabelFont(43);
+   h_new_632->GetXaxis()->SetLabelOffset(0.01);
+   h_new_632->GetXaxis()->SetLabelSize(20);
+   h_new_632->GetXaxis()->SetTitleSize(25);
+   h_new_632->GetXaxis()->SetTitleOffset(1.5);
+   h_new_632->GetXaxis()->SetTitleFont(43);
+   h_new_632->GetYaxis()->SetLabelFont(43);
+   h_new_632->GetYaxis()->SetLabelOffset(0.01);
+   h_new_632->GetYaxis()->SetLabelSize(20);
+   h_new_632->GetYaxis()->SetTitleSize(25);
+   h_new_632->GetYaxis()->SetTitleOffset(1.7);
+   h_new_632->GetYaxis()->SetTitleFont(43);
+   h_new_632->GetZaxis()->SetLabelFont(43);
+   h_new_632->GetZaxis()->SetLabelSize(20);
+   h_new_632->GetZaxis()->SetTitleSize(25);
+   h_new_632->GetZaxis()->SetTitleFont(43);
+   h_new_632->Draw("E1same");
+   TLatex *   tex = new TLatex(0.55,0.79,"");
+tex->SetNDC();
+   tex->SetTextFont(43);
+   tex->SetTextSize(20);
+   tex->SetLineWidth(2);
+   tex->Draw();
+   
+   TLegend *leg = new TLegend(0.48,0.6,0.85,0.8,NULL,"brNDC");
+   leg->SetBorderSize(0);
+   leg->SetTextFont(43);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(4000);
+   TLegendEntry *entry=leg->AddEntry("h_ori_6","Dsize_ori","P");
+   entry->SetLineColor(1);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+
+   ci = TColor::GetColor("#000082");
+   entry->SetMarkerColor(ci);
+   entry->SetMarkerStyle(20);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("h_new_6","Dsize_new","P");
+   entry->SetLineColor(1);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+
+   ci = TColor::GetColor("#87ec76");
+   entry->SetMarkerColor(ci);
+   entry->SetMarkerStyle(20);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   6->Modified();
+   6->cd();
+   6->SetSelected(6);
+}

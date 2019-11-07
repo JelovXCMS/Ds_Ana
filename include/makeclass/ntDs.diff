@@ -1,0 +1,670 @@
+3c3
+< // Mon Feb 26 17:53:40 2018 by ROOT version 6.02/13
+---
+> // Thu Mar  1 17:33:08 2018 by ROOT version 6.02/13
+5c5
+< // found on file: Dntuple_finder_PbPb_1111.root_1104.root
+---
+> // found on file: Ds_phikkpi_pt4.root
+8,9c8,9
+< #ifndef ntDs_Class_h
+< #define ntDs_Class_h
+---
+> #ifndef ntDsMC_Class_h
+> #define ntDsMC_Class_h
+17c17
+< class ntDs_Class {
+---
+> class ntDsMC_Class {
+36,295c36,235
+<    Float_t         PVxE;
+<    Float_t         PVyE;
+<    Float_t         PVzE;
+<    Float_t         BSxErr;
+<    Float_t         BSyErr;
+<    Float_t         BSzErr;
+<    Float_t         BSdxdz;
+<    Float_t         BSdydz;
+<    Float_t         BSdxdzErr;
+<    Float_t         BSdydzErr;
+<    Float_t         BSWidthX;
+<    Float_t         BSWidthXErr;
+<    Float_t         BSWidthY;
+<    Float_t         BSWidthYErr;
+<    Int_t           Dindex[280];   //[Dsize]
+<    Int_t           Dtype[280];   //[Dsize]
+<    Float_t         Dmass[280];   //[Dsize]
+<    Float_t         D_unfitted_mass[280];   //[Dsize]
+<    Float_t         Dpt[280];   //[Dsize]
+<    Float_t         D_unfitted_pt[280];   //[Dsize]
+<    Float_t         Deta[280];   //[Dsize]
+<    Float_t         Dphi[280];   //[Dsize]
+<    Float_t         Dy[280];   //[Dsize]
+<    Float_t         DvtxX[280];   //[Dsize]
+<    Float_t         DvtxY[280];   //[Dsize]
+<    Float_t         DvtxZ[280];   //[Dsize]
+<    Float_t         Dd0[280];   //[Dsize]
+<    Float_t         Dd0Err[280];   //[Dsize]
+<    Float_t         Ddxyz[280];   //[Dsize]
+<    Float_t         DdxyzErr[280];   //[Dsize]
+<    Float_t         Dchi2ndf[280];   //[Dsize]
+<    Float_t         Dchi2cl[280];   //[Dsize]
+<    Float_t         Ddtheta[280];   //[Dsize]
+<    Float_t         Dlxy[280];   //[Dsize]
+<    Float_t         Dalpha[280];   //[Dsize]
+<    Float_t         DsvpvDistance[280];   //[Dsize]
+<    Float_t         DsvpvDisErr[280];   //[Dsize]
+<    Float_t         DsvpvDistance_2D[280];   //[Dsize]
+<    Float_t         DsvpvDisErr_2D[280];   //[Dsize]
+<    Float_t         Ddca[280];   //[Dsize]
+<    Float_t         DlxyBS[280];   //[Dsize]
+<    Float_t         DlxyBSErr[280];   //[Dsize]
+<    Float_t         DMaxDoca[280];   //[Dsize]
+<    Float_t         DMaxTkPt[280];   //[Dsize]
+<    Float_t         DMinTkPt[280];   //[Dsize]
+<    Float_t         Dtrk1Pt[280];   //[Dsize]
+<    Float_t         Dtrk2Pt[280];   //[Dsize]
+<    Float_t         Dtrk1PtErr[280];   //[Dsize]
+<    Float_t         Dtrk2PtErr[280];   //[Dsize]
+<    Float_t         Dtrk1Eta[280];   //[Dsize]
+<    Float_t         Dtrk2Eta[280];   //[Dsize]
+<    Float_t         Dtrk1Phi[280];   //[Dsize]
+<    Float_t         Dtrk2Phi[280];   //[Dsize]
+<    Float_t         Dtrk1P[280];   //[Dsize]
+<    Float_t         Dtrk2P[280];   //[Dsize]
+<    Float_t         Dtrk1Dz[280];   //[Dsize]
+<    Float_t         Dtrk2Dz[280];   //[Dsize]
+<    Float_t         Dtrk1Dxy[280];   //[Dsize]
+<    Float_t         Dtrk2Dxy[280];   //[Dsize]
+<    Float_t         Dtrk1MassHypo[280];   //[Dsize]
+<    Float_t         Dtrk2MassHypo[280];   //[Dsize]
+<    Int_t           Dtrk1originalAlgo[280];   //[Dsize]
+<    Int_t           Dtrk2originalAlgo[280];   //[Dsize]
+<    Bool_t          Dtrk1highPurity[280];   //[Dsize]
+<    Bool_t          Dtrk2highPurity[280];   //[Dsize]
+<    Float_t         Dtrk1dedx[280];   //[Dsize]
+<    Float_t         Dtrk2dedx[280];   //[Dsize]
+<    Float_t         Dtrk1thetastar[280];   //[Dsize]
+<    Float_t         Dtrk2thetastar[280];   //[Dsize]
+<    Float_t         Dtrk1thetastar_uf[280];   //[Dsize]
+<    Float_t         Dtrk2thetastar_uf[280];   //[Dsize]
+<    Float_t         Dtrk1PixelHit[280];   //[Dsize]
+<    Float_t         Dtrk2PixelHit[280];   //[Dsize]
+<    Float_t         Dtrk1StripHit[280];   //[Dsize]
+<    Float_t         Dtrk2StripHit[280];   //[Dsize]
+<    Float_t         Dtrk1nStripLayer[280];   //[Dsize]
+<    Float_t         Dtrk2nStripLayer[280];   //[Dsize]
+<    Float_t         Dtrk1nPixelLayer[280];   //[Dsize]
+<    Float_t         Dtrk2nPixelLayer[280];   //[Dsize]
+<    Float_t         Dtrk1Chi2ndf[280];   //[Dsize]
+<    Float_t         Dtrk2Chi2ndf[280];   //[Dsize]
+<    Int_t           Dtrk1Algo[280];   //[Dsize]
+<    Int_t           Dtrk2Algo[280];   //[Dsize]
+<    Float_t         Dtrk3Pt[280];   //[Dsize]
+<    Float_t         Dtrk4Pt[280];   //[Dsize]
+<    Float_t         Dtrk3PtErr[280];   //[Dsize]
+<    Float_t         Dtrk4PtErr[280];   //[Dsize]
+<    Float_t         Dtrk3Eta[280];   //[Dsize]
+<    Float_t         Dtrk4Eta[280];   //[Dsize]
+<    Float_t         Dtrk3Phi[280];   //[Dsize]
+<    Float_t         Dtrk4Phi[280];   //[Dsize]
+<    Float_t         Dtrk3P[280];   //[Dsize]
+<    Float_t         Dtrk4P[280];   //[Dsize]
+<    Float_t         Dtrk3MassHypo[280];   //[Dsize]
+<    Float_t         Dtrk4MassHypo[280];   //[Dsize]
+<    Float_t         Dtrk3Dz[280];   //[Dsize]
+<    Float_t         Dtrk4Dz[280];   //[Dsize]
+<    Float_t         Dtrk3Dxy[280];   //[Dsize]
+<    Float_t         Dtrk4Dxy[280];   //[Dsize]
+<    Int_t           Dtrk3originalAlgo[280];   //[Dsize]
+<    Int_t           Dtrk4originalAlgo[280];   //[Dsize]
+<    Bool_t          Dtrk3highPurity[280];   //[Dsize]
+<    Bool_t          Dtrk4highPurity[280];   //[Dsize]
+<    Float_t         Dtrk3dedx[280];   //[Dsize]
+<    Float_t         Dtrk4dedx[280];   //[Dsize]
+<    Float_t         Dtrk3thetastar[280];   //[Dsize]
+<    Float_t         Dtrk4thetastar[280];   //[Dsize]
+<    Float_t         Dtrk3thetastar_uf[280];   //[Dsize]
+<    Float_t         Dtrk4thetastar_uf[280];   //[Dsize]
+<    Float_t         Dtrk3PixelHit[280];   //[Dsize]
+<    Float_t         Dtrk4PixelHit[280];   //[Dsize]
+<    Float_t         Dtrk3StripHit[280];   //[Dsize]
+<    Float_t         Dtrk4StripHit[280];   //[Dsize]
+<    Float_t         Dtrk3nStripLayer[280];   //[Dsize]
+<    Float_t         Dtrk4nStripLayer[280];   //[Dsize]
+<    Float_t         Dtrk3nPixelLayer[280];   //[Dsize]
+<    Float_t         Dtrk4nPixelLayer[280];   //[Dsize]
+<    Float_t         Dtrk3Chi2ndf[280];   //[Dsize]
+<    Float_t         Dtrk4Chi2ndf[280];   //[Dsize]
+<    Int_t           Dtrk3Algo[280];   //[Dsize]
+<    Int_t           Dtrk4Algo[280];   //[Dsize]
+<    Float_t         Dtrk1Y[280];   //[Dsize]
+<    Float_t         Dtrk2Y[280];   //[Dsize]
+<    Float_t         Dtrk1D0[280];   //[Dsize]
+<    Float_t         Dtrk2D0[280];   //[Dsize]
+<    Float_t         Dtrk1D0Err[280];   //[Dsize]
+<    Float_t         Dtrk2D0Err[280];   //[Dsize]
+<    Int_t           Dtrk1Quality[280];   //[Dsize]
+<    Int_t           Dtrk2Quality[280];   //[Dsize]
+<    Int_t           Dtrk1Idx[280];   //[Dsize]
+<    Int_t           Dtrk2Idx[280];   //[Dsize]
+<    Float_t         Dtrk1EtaErr[280];   //[Dsize]
+<    Float_t         Dtrk2EtaErr[280];   //[Dsize]
+<    Float_t         Dtrk1PhiErr[280];   //[Dsize]
+<    Float_t         Dtrk2PhiErr[280];   //[Dsize]
+<    Float_t         Dtrk1MVAVal[280];   //[Dsize]
+<    Float_t         Dtrk2MVAVal[280];   //[Dsize]
+<    Float_t         Dtrk3Y[280];   //[Dsize]
+<    Float_t         Dtrk4Y[280];   //[Dsize]
+<    Float_t         Dtrk3D0[280];   //[Dsize]
+<    Float_t         Dtrk4D0[280];   //[Dsize]
+<    Float_t         Dtrk3D0Err[280];   //[Dsize]
+<    Float_t         Dtrk4D0Err[280];   //[Dsize]
+<    Int_t           Dtrk3Quality[280];   //[Dsize]
+<    Int_t           Dtrk4Quality[280];   //[Dsize]
+<    Int_t           Dtrk3Idx[280];   //[Dsize]
+<    Int_t           Dtrk4Idx[280];   //[Dsize]
+<    Float_t         Dtrk3EtaErr[280];   //[Dsize]
+<    Float_t         Dtrk4EtaErr[280];   //[Dsize]
+<    Float_t         Dtrk3PhiErr[280];   //[Dsize]
+<    Float_t         Dtrk4PhiErr[280];   //[Dsize]
+<    Float_t         Dtrk3MVAVal[280];   //[Dsize]
+<    Float_t         Dtrk4MVAVal[280];   //[Dsize]
+<    Float_t         DtktkResmass[280];   //[Dsize]
+<    Float_t         DtktkRes_unfitted_mass[280];   //[Dsize]
+<    Float_t         DtktkRespt[280];   //[Dsize]
+<    Float_t         DtktkRes_unfitted_pt[280];   //[Dsize]
+<    Float_t         DtktkReseta[280];   //[Dsize]
+<    Float_t         DtktkResphi[280];   //[Dsize]
+<    Float_t         DtktkRes_chi2ndf[280];   //[Dsize]
+<    Float_t         DtktkRes_chi2cl[280];   //[Dsize]
+<    Float_t         DtktkRes_alpha[280];   //[Dsize]
+<    Float_t         DtktkRes_alphaToSV[280];   //[Dsize]
+<    Float_t         DtktkRes_svpvDistance[280];   //[Dsize]
+<    Float_t         DtktkRes_svpvDisErr[280];   //[Dsize]
+<    Float_t         DtktkRes_svpvDistanceToSV[280];   //[Dsize]
+<    Float_t         DtktkRes_svpvDisErrToSV[280];   //[Dsize]
+<    Float_t         DtktkRes_dca[280];   //[Dsize]
+<    Float_t         DtktkRes_dcaToSV[280];   //[Dsize]
+<    Float_t         DtktkRes_lxyBS[280];   //[Dsize]
+<    Float_t         DtktkRes_lxyBSErr[280];   //[Dsize]
+<    Float_t         DtktkRes_angleToTrk1[280];   //[Dsize]
+<    Float_t         DtktkRes_unfitted_angleToTrk1[280];   //[Dsize]
+<    Float_t         DtktkRes_ptAsymToTrk1[280];   //[Dsize]
+<    Float_t         DtktkRes_unfitter_ptAsymToTrk1[280];   //[Dsize]
+<    Float_t         DRestrk1Pt[280];   //[Dsize]
+<    Float_t         DRestrk2Pt[280];   //[Dsize]
+<    Float_t         DRestrk3Pt[280];   //[Dsize]
+<    Float_t         DRestrk4Pt[280];   //[Dsize]
+<    Float_t         DRestrk1PtErr[280];   //[Dsize]
+<    Float_t         DRestrk2PtErr[280];   //[Dsize]
+<    Float_t         DRestrk3PtErr[280];   //[Dsize]
+<    Float_t         DRestrk4PtErr[280];   //[Dsize]
+<    Float_t         DRestrk1Eta[280];   //[Dsize]
+<    Float_t         DRestrk2Eta[280];   //[Dsize]
+<    Float_t         DRestrk3Eta[280];   //[Dsize]
+<    Float_t         DRestrk4Eta[280];   //[Dsize]
+<    Float_t         DRestrk1Phi[280];   //[Dsize]
+<    Float_t         DRestrk2Phi[280];   //[Dsize]
+<    Float_t         DRestrk3Phi[280];   //[Dsize]
+<    Float_t         DRestrk4Phi[280];   //[Dsize]
+<    Float_t         DRestrk1P[280];   //[Dsize]
+<    Float_t         DRestrk2P[280];   //[Dsize]
+<    Float_t         DRestrk3P[280];   //[Dsize]
+<    Float_t         DRestrk4P[280];   //[Dsize]
+<    Float_t         DRestrk1MassHypo[280];   //[Dsize]
+<    Float_t         DRestrk2MassHypo[280];   //[Dsize]
+<    Float_t         DRestrk3MassHypo[280];   //[Dsize]
+<    Float_t         DRestrk4MassHypo[280];   //[Dsize]
+<    Float_t         DRestrk1Dz[280];   //[Dsize]
+<    Float_t         DRestrk2Dz[280];   //[Dsize]
+<    Float_t         DRestrk3Dz[280];   //[Dsize]
+<    Float_t         DRestrk4Dz[280];   //[Dsize]
+<    Float_t         DRestrk1Dxy[280];   //[Dsize]
+<    Float_t         DRestrk2Dxy[280];   //[Dsize]
+<    Float_t         DRestrk3Dxy[280];   //[Dsize]
+<    Float_t         DRestrk4Dxy[280];   //[Dsize]
+<    Int_t           DRestrk1originalAlgo[280];   //[Dsize]
+<    Int_t           DRestrk2originalAlgo[280];   //[Dsize]
+<    Int_t           DRestrk3originalAlgo[280];   //[Dsize]
+<    Int_t           DRestrk4originalAlgo[280];   //[Dsize]
+<    Bool_t          DRestrk1highPurity[280];   //[Dsize]
+<    Bool_t          DRestrk2highPurity[280];   //[Dsize]
+<    Bool_t          DRestrk3highPurity[280];   //[Dsize]
+<    Bool_t          DRestrk4highPurity[280];   //[Dsize]
+<    Float_t         DRestrk1dedx[280];   //[Dsize]
+<    Float_t         DRestrk2dedx[280];   //[Dsize]
+<    Float_t         DRestrk3dedx[280];   //[Dsize]
+<    Float_t         DRestrk4dedx[280];   //[Dsize]
+<    Float_t         DRestrk1thetastar[280];   //[Dsize]
+<    Float_t         DRestrk2thetastar[280];   //[Dsize]
+<    Float_t         DRestrk3thetastar[280];   //[Dsize]
+<    Float_t         DRestrk4thetastar[280];   //[Dsize]
+<    Float_t         DRestrk1thetastar_uf[280];   //[Dsize]
+<    Float_t         DRestrk2thetastar_uf[280];   //[Dsize]
+<    Float_t         DRestrk3thetastar_uf[280];   //[Dsize]
+<    Float_t         DRestrk4thetastar_uf[280];   //[Dsize]
+<    Float_t         DRestrk1Y[280];   //[Dsize]
+<    Float_t         DRestrk2Y[280];   //[Dsize]
+<    Float_t         DRestrk3Y[280];   //[Dsize]
+<    Float_t         DRestrk4Y[280];   //[Dsize]
+<    Float_t         DRestrk1D0[280];   //[Dsize]
+<    Float_t         DRestrk2D0[280];   //[Dsize]
+<    Float_t         DRestrk3D0[280];   //[Dsize]
+<    Float_t         DRestrk4D0[280];   //[Dsize]
+<    Float_t         DRestrk1D0Err[280];   //[Dsize]
+<    Float_t         DRestrk2D0Err[280];   //[Dsize]
+<    Float_t         DRestrk3D0Err[280];   //[Dsize]
+<    Float_t         DRestrk4D0Err[280];   //[Dsize]
+<    Int_t           DRestrk1Quality[280];   //[Dsize]
+<    Int_t           DRestrk2Quality[280];   //[Dsize]
+<    Int_t           DRestrk3Quality[280];   //[Dsize]
+<    Int_t           DRestrk4Quality[280];   //[Dsize]
+<    Float_t         Dgen[280];   //[Dsize]
+<    Int_t           DgenIndex[280];   //[Dsize]
+<    Int_t           DgennDa[280];   //[Dsize]
+<    Float_t         Dgenpt[280];   //[Dsize]
+<    Float_t         Dgeneta[280];   //[Dsize]
+<    Float_t         Dgenphi[280];   //[Dsize]
+<    Float_t         Dgeny[280];   //[Dsize]
+<    Int_t           DgencollisionId[280];   //[Dsize]
+<    Float_t         DgenBAncestorpt[280];   //[Dsize]
+<    Int_t           DgenBAncestorpdgId[280];   //[Dsize]
+<    Float_t         DgenprodvtxX[280];   //[Dsize]
+<    Float_t         DgenprodvtxY[280];   //[Dsize]
+<    Float_t         DgenprodvtxZ[280];   //[Dsize]
+<    Float_t         DgendecayvtxX[280];   //[Dsize]
+<    Float_t         DgendecayvtxY[280];   //[Dsize]
+<    Float_t         DgendecayvtxZ[280];   //[Dsize]
+<    Int_t           DgenfromgenPV[280];   //[Dsize]
+---
+>    Int_t           Dindex[11];   //[Dsize]
+>    Int_t           Dtype[11];   //[Dsize]
+>    Float_t         Dmass[11];   //[Dsize]
+>    Float_t         D_unfitted_mass[11];   //[Dsize]
+>    Float_t         Dpt[11];   //[Dsize]
+>    Float_t         D_unfitted_pt[11];   //[Dsize]
+>    Float_t         Deta[11];   //[Dsize]
+>    Float_t         Dphi[11];   //[Dsize]
+>    Float_t         Dy[11];   //[Dsize]
+>    Float_t         DvtxX[11];   //[Dsize]
+>    Float_t         DvtxY[11];   //[Dsize]
+>    Float_t         DvtxZ[11];   //[Dsize]
+>    Float_t         Dd0[11];   //[Dsize]
+>    Float_t         Dd0Err[11];   //[Dsize]
+>    Float_t         Ddxyz[11];   //[Dsize]
+>    Float_t         DdxyzErr[11];   //[Dsize]
+>    Float_t         Dchi2ndf[11];   //[Dsize]
+>    Float_t         Dchi2cl[11];   //[Dsize]
+>    Float_t         Ddtheta[11];   //[Dsize]
+>    Float_t         Dlxy[11];   //[Dsize]
+>    Float_t         Dalpha[11];   //[Dsize]
+>    Float_t         DsvpvDistance[11];   //[Dsize]
+>    Float_t         DsvpvDisErr[11];   //[Dsize]
+>    Float_t         DsvpvDistance_2D[11];   //[Dsize]
+>    Float_t         DsvpvDisErr_2D[11];   //[Dsize]
+>    Float_t         Ddca[11];   //[Dsize]
+>    Float_t         DlxyBS[11];   //[Dsize]
+>    Float_t         DlxyBSErr[11];   //[Dsize]
+>    Float_t         DMaxDoca[11];   //[Dsize]
+>    Float_t         DMaxTkPt[11];   //[Dsize]
+>    Float_t         DMinTkPt[11];   //[Dsize]
+>    Float_t         Dtrk1Pt[11];   //[Dsize]
+>    Float_t         Dtrk2Pt[11];   //[Dsize]
+>    Float_t         Dtrk1PtErr[11];   //[Dsize]
+>    Float_t         Dtrk2PtErr[11];   //[Dsize]
+>    Float_t         Dtrk1Eta[11];   //[Dsize]
+>    Float_t         Dtrk2Eta[11];   //[Dsize]
+>    Float_t         Dtrk1Phi[11];   //[Dsize]
+>    Float_t         Dtrk2Phi[11];   //[Dsize]
+>    Float_t         Dtrk1P[11];   //[Dsize]
+>    Float_t         Dtrk2P[11];   //[Dsize]
+>    Float_t         Dtrk1Dz[11];   //[Dsize]
+>    Float_t         Dtrk2Dz[11];   //[Dsize]
+>    Float_t         Dtrk1Dxy[11];   //[Dsize]
+>    Float_t         Dtrk2Dxy[11];   //[Dsize]
+>    Float_t         Dtrk1MassHypo[11];   //[Dsize]
+>    Float_t         Dtrk2MassHypo[11];   //[Dsize]
+>    Int_t           Dtrk1originalAlgo[11];   //[Dsize]
+>    Int_t           Dtrk2originalAlgo[11];   //[Dsize]
+>    Bool_t          Dtrk1highPurity[11];   //[Dsize]
+>    Bool_t          Dtrk2highPurity[11];   //[Dsize]
+>    Float_t         Dtrk1dedx[11];   //[Dsize]
+>    Float_t         Dtrk2dedx[11];   //[Dsize]
+>    Float_t         Dtrk1thetastar[11];   //[Dsize]
+>    Float_t         Dtrk2thetastar[11];   //[Dsize]
+>    Float_t         Dtrk1thetastar_uf[11];   //[Dsize]
+>    Float_t         Dtrk2thetastar_uf[11];   //[Dsize]
+>    Float_t         Dtrk1PixelHit[11];   //[Dsize]
+>    Float_t         Dtrk2PixelHit[11];   //[Dsize]
+>    Float_t         Dtrk1StripHit[11];   //[Dsize]
+>    Float_t         Dtrk2StripHit[11];   //[Dsize]
+>    Float_t         Dtrk1nStripLayer[11];   //[Dsize]
+>    Float_t         Dtrk2nStripLayer[11];   //[Dsize]
+>    Float_t         Dtrk1nPixelLayer[11];   //[Dsize]
+>    Float_t         Dtrk2nPixelLayer[11];   //[Dsize]
+>    Float_t         Dtrk1Chi2ndf[11];   //[Dsize]
+>    Float_t         Dtrk2Chi2ndf[11];   //[Dsize]
+>    Int_t           Dtrk1Algo[11];   //[Dsize]
+>    Int_t           Dtrk2Algo[11];   //[Dsize]
+>    Float_t         Dtrk3Pt[11];   //[Dsize]
+>    Float_t         Dtrk4Pt[11];   //[Dsize]
+>    Float_t         Dtrk3PtErr[11];   //[Dsize]
+>    Float_t         Dtrk4PtErr[11];   //[Dsize]
+>    Float_t         Dtrk3Eta[11];   //[Dsize]
+>    Float_t         Dtrk4Eta[11];   //[Dsize]
+>    Float_t         Dtrk3Phi[11];   //[Dsize]
+>    Float_t         Dtrk4Phi[11];   //[Dsize]
+>    Float_t         Dtrk3P[11];   //[Dsize]
+>    Float_t         Dtrk4P[11];   //[Dsize]
+>    Float_t         Dtrk3MassHypo[11];   //[Dsize]
+>    Float_t         Dtrk4MassHypo[11];   //[Dsize]
+>    Float_t         Dtrk3Dz[11];   //[Dsize]
+>    Float_t         Dtrk4Dz[11];   //[Dsize]
+>    Float_t         Dtrk3Dxy[11];   //[Dsize]
+>    Float_t         Dtrk4Dxy[11];   //[Dsize]
+>    Int_t           Dtrk3originalAlgo[11];   //[Dsize]
+>    Int_t           Dtrk4originalAlgo[11];   //[Dsize]
+>    Bool_t          Dtrk3highPurity[11];   //[Dsize]
+>    Bool_t          Dtrk4highPurity[11];   //[Dsize]
+>    Float_t         Dtrk3dedx[11];   //[Dsize]
+>    Float_t         Dtrk4dedx[11];   //[Dsize]
+>    Float_t         Dtrk3thetastar[11];   //[Dsize]
+>    Float_t         Dtrk4thetastar[11];   //[Dsize]
+>    Float_t         Dtrk3thetastar_uf[11];   //[Dsize]
+>    Float_t         Dtrk4thetastar_uf[11];   //[Dsize]
+>    Float_t         Dtrk3PixelHit[11];   //[Dsize]
+>    Float_t         Dtrk4PixelHit[11];   //[Dsize]
+>    Float_t         Dtrk3StripHit[11];   //[Dsize]
+>    Float_t         Dtrk4StripHit[11];   //[Dsize]
+>    Float_t         Dtrk3nStripLayer[11];   //[Dsize]
+>    Float_t         Dtrk4nStripLayer[11];   //[Dsize]
+>    Float_t         Dtrk3nPixelLayer[11];   //[Dsize]
+>    Float_t         Dtrk4nPixelLayer[11];   //[Dsize]
+>    Float_t         Dtrk3Chi2ndf[11];   //[Dsize]
+>    Float_t         Dtrk4Chi2ndf[11];   //[Dsize]
+>    Int_t           Dtrk3Algo[11];   //[Dsize]
+>    Int_t           Dtrk4Algo[11];   //[Dsize]
+>    Float_t         DtktkResmass[11];   //[Dsize]
+>    Float_t         DtktkRes_unfitted_mass[11];   //[Dsize]
+>    Float_t         DtktkRespt[11];   //[Dsize]
+>    Float_t         DtktkRes_unfitted_pt[11];   //[Dsize]
+>    Float_t         DtktkReseta[11];   //[Dsize]
+>    Float_t         DtktkResphi[11];   //[Dsize]
+>    Float_t         DtktkRes_chi2ndf[11];   //[Dsize]
+>    Float_t         DtktkRes_chi2cl[11];   //[Dsize]
+>    Float_t         DtktkRes_alpha[11];   //[Dsize]
+>    Float_t         DtktkRes_alphaToSV[11];   //[Dsize]
+>    Float_t         DtktkRes_svpvDistance[11];   //[Dsize]
+>    Float_t         DtktkRes_svpvDisErr[11];   //[Dsize]
+>    Float_t         DtktkRes_svpvDistanceToSV[11];   //[Dsize]
+>    Float_t         DtktkRes_svpvDisErrToSV[11];   //[Dsize]
+>    Float_t         DtktkRes_dca[11];   //[Dsize]
+>    Float_t         DtktkRes_dcaToSV[11];   //[Dsize]
+>    Float_t         DtktkRes_lxyBS[11];   //[Dsize]
+>    Float_t         DtktkRes_lxyBSErr[11];   //[Dsize]
+>    Float_t         DtktkRes_angleToTrk1[11];   //[Dsize]
+>    Float_t         DtktkRes_unfitted_angleToTrk1[11];   //[Dsize]
+>    Float_t         DtktkRes_ptAsymToTrk1[11];   //[Dsize]
+>    Float_t         DtktkRes_unfitter_ptAsymToTrk1[11];   //[Dsize]
+>    Float_t         DRestrk1Pt[11];   //[Dsize]
+>    Float_t         DRestrk2Pt[11];   //[Dsize]
+>    Float_t         DRestrk3Pt[11];   //[Dsize]
+>    Float_t         DRestrk4Pt[11];   //[Dsize]
+>    Float_t         DRestrk1PtErr[11];   //[Dsize]
+>    Float_t         DRestrk2PtErr[11];   //[Dsize]
+>    Float_t         DRestrk3PtErr[11];   //[Dsize]
+>    Float_t         DRestrk4PtErr[11];   //[Dsize]
+>    Float_t         DRestrk1Eta[11];   //[Dsize]
+>    Float_t         DRestrk2Eta[11];   //[Dsize]
+>    Float_t         DRestrk3Eta[11];   //[Dsize]
+>    Float_t         DRestrk4Eta[11];   //[Dsize]
+>    Float_t         DRestrk1Phi[11];   //[Dsize]
+>    Float_t         DRestrk2Phi[11];   //[Dsize]
+>    Float_t         DRestrk3Phi[11];   //[Dsize]
+>    Float_t         DRestrk4Phi[11];   //[Dsize]
+>    Float_t         DRestrk1P[11];   //[Dsize]
+>    Float_t         DRestrk2P[11];   //[Dsize]
+>    Float_t         DRestrk3P[11];   //[Dsize]
+>    Float_t         DRestrk4P[11];   //[Dsize]
+>    Float_t         DRestrk1MassHypo[11];   //[Dsize]
+>    Float_t         DRestrk2MassHypo[11];   //[Dsize]
+>    Float_t         DRestrk3MassHypo[11];   //[Dsize]
+>    Float_t         DRestrk4MassHypo[11];   //[Dsize]
+>    Float_t         DRestrk1Dz[11];   //[Dsize]
+>    Float_t         DRestrk2Dz[11];   //[Dsize]
+>    Float_t         DRestrk3Dz[11];   //[Dsize]
+>    Float_t         DRestrk4Dz[11];   //[Dsize]
+>    Float_t         DRestrk1Dxy[11];   //[Dsize]
+>    Float_t         DRestrk2Dxy[11];   //[Dsize]
+>    Float_t         DRestrk3Dxy[11];   //[Dsize]
+>    Float_t         DRestrk4Dxy[11];   //[Dsize]
+>    Int_t           DRestrk1originalAlgo[11];   //[Dsize]
+>    Int_t           DRestrk2originalAlgo[11];   //[Dsize]
+>    Int_t           DRestrk3originalAlgo[11];   //[Dsize]
+>    Int_t           DRestrk4originalAlgo[11];   //[Dsize]
+>    Bool_t          DRestrk1highPurity[11];   //[Dsize]
+>    Bool_t          DRestrk2highPurity[11];   //[Dsize]
+>    Bool_t          DRestrk3highPurity[11];   //[Dsize]
+>    Bool_t          DRestrk4highPurity[11];   //[Dsize]
+>    Float_t         DRestrk1dedx[11];   //[Dsize]
+>    Float_t         DRestrk2dedx[11];   //[Dsize]
+>    Float_t         DRestrk3dedx[11];   //[Dsize]
+>    Float_t         DRestrk4dedx[11];   //[Dsize]
+>    Float_t         DRestrk1thetastar[11];   //[Dsize]
+>    Float_t         DRestrk2thetastar[11];   //[Dsize]
+>    Float_t         DRestrk3thetastar[11];   //[Dsize]
+>    Float_t         DRestrk4thetastar[11];   //[Dsize]
+>    Float_t         DRestrk1thetastar_uf[11];   //[Dsize]
+>    Float_t         DRestrk2thetastar_uf[11];   //[Dsize]
+>    Float_t         DRestrk3thetastar_uf[11];   //[Dsize]
+>    Float_t         DRestrk4thetastar_uf[11];   //[Dsize]
+>    Int_t           Dgen[11];   //[Dsize]
+>    Int_t           DsGen[11];   //[Dsize]
+>    Int_t           DgenIndex[11];   //[Dsize]
+>    Int_t           DgennDa[11];   //[Dsize]
+>    Float_t         DgenMass[11];   //[Dsize]
+>    Float_t         Dgenpt[11];   //[Dsize]
+>    Float_t         Dgeneta[11];   //[Dsize]
+>    Float_t         Dgenphi[11];   //[Dsize]
+>    Float_t         Dgeny[11];   //[Dsize]
+>    Int_t           DgencollisionId[11];   //[Dsize]
+>    Float_t         DgenBAncestorpt[11];   //[Dsize]
+>    Int_t           DgenBAncestorpdgId[11];   //[Dsize]
+>    Float_t         DgenprodvtxX[11];   //[Dsize]
+>    Float_t         DgenprodvtxY[11];   //[Dsize]
+>    Float_t         DgenprodvtxZ[11];   //[Dsize]
+>    Float_t         DgendecayvtxX[11];   //[Dsize]
+>    Float_t         DgendecayvtxY[11];   //[Dsize]
+>    Float_t         DgendecayvtxZ[11];   //[Dsize]
+>    Int_t           DgenfromgenPV[11];   //[Dsize]
+309,322d248
+<    TBranch        *b_PVxE;   //!
+<    TBranch        *b_PVyE;   //!
+<    TBranch        *b_PVzE;   //!
+<    TBranch        *b_BSxErr;   //!
+<    TBranch        *b_BSyErr;   //!
+<    TBranch        *b_BSzErr;   //!
+<    TBranch        *b_BSdxdz;   //!
+<    TBranch        *b_BSdydz;   //!
+<    TBranch        *b_BSdxdzErr;   //!
+<    TBranch        *b_BSdydzErr;   //!
+<    TBranch        *b_BSWidthX;   //!
+<    TBranch        *b_BSWidthXErr;   //!
+<    TBranch        *b_BSWidthY;   //!
+<    TBranch        *b_BSWidthYErr;   //!
+430,461d355
+<    TBranch        *b_Dtrk1Y;   //!
+<    TBranch        *b_Dtrk2Y;   //!
+<    TBranch        *b_Dtrk1D0;   //!
+<    TBranch        *b_Dtrk2D0;   //!
+<    TBranch        *b_Dtrk1D0Err;   //!
+<    TBranch        *b_Dtrk2D0Err;   //!
+<    TBranch        *b_Dtrk1Quality;   //!
+<    TBranch        *b_Dtrk2Quality;   //!
+<    TBranch        *b_Dtrk1Idx;   //!
+<    TBranch        *b_Dtrk2Idx;   //!
+<    TBranch        *b_Dtrk1EtaErr;   //!
+<    TBranch        *b_Dtrk2EtaErr;   //!
+<    TBranch        *b_Dtrk1PhiErr;   //!
+<    TBranch        *b_Dtrk2PhiErr;   //!
+<    TBranch        *b_Dtrk1MVAVal;   //!
+<    TBranch        *b_Dtrk2MVAVal;   //!
+<    TBranch        *b_Dtrk3Y;   //!
+<    TBranch        *b_Dtrk4Y;   //!
+<    TBranch        *b_Dtrk3D0;   //!
+<    TBranch        *b_Dtrk4D0;   //!
+<    TBranch        *b_Dtrk3D0Err;   //!
+<    TBranch        *b_Dtrk4D0Err;   //!
+<    TBranch        *b_Dtrk3Quality;   //!
+<    TBranch        *b_Dtrk4Quality;   //!
+<    TBranch        *b_Dtrk3Idx;   //!
+<    TBranch        *b_Dtrk4Idx;   //!
+<    TBranch        *b_Dtrk3EtaErr;   //!
+<    TBranch        *b_Dtrk4EtaErr;   //!
+<    TBranch        *b_Dtrk3PhiErr;   //!
+<    TBranch        *b_Dtrk4PhiErr;   //!
+<    TBranch        *b_Dtrk3MVAVal;   //!
+<    TBranch        *b_Dtrk4MVAVal;   //!
+536,551d429
+<    TBranch        *b_DRestrk1Y;   //!
+<    TBranch        *b_DRestrk2Y;   //!
+<    TBranch        *b_DRestrk3Y;   //!
+<    TBranch        *b_DRestrk4Y;   //!
+<    TBranch        *b_DRestrk1D0;   //!
+<    TBranch        *b_DRestrk2D0;   //!
+<    TBranch        *b_DRestrk3D0;   //!
+<    TBranch        *b_DRestrk4D0;   //!
+<    TBranch        *b_DRestrk1D0Err;   //!
+<    TBranch        *b_DRestrk2D0Err;   //!
+<    TBranch        *b_DRestrk3D0Err;   //!
+<    TBranch        *b_DRestrk4D0Err;   //!
+<    TBranch        *b_DRestrk1Quality;   //!
+<    TBranch        *b_DRestrk2Quality;   //!
+<    TBranch        *b_DRestrk3Quality;   //!
+<    TBranch        *b_DRestrk4Quality;   //!
+552a431
+>    TBranch        *b_DsGen;   //!
+554a434
+>    TBranch        *b_DgenMass;   //!
+570,571c450,451
+<    ntDs_Class(TTree *tree=0);
+<    virtual ~ntDs_Class();
+---
+>    ntDsMC_Class(TTree *tree=0);
+>    virtual ~ntDsMC_Class();
+583,584c463,464
+< #ifdef ntDs_Class_cxx
+< ntDs_Class::ntDs_Class(TTree *tree) : fChain(0) 
+---
+> #ifdef ntDsMC_Class_cxx
+> ntDsMC_Class::ntDsMC_Class(TTree *tree) : fChain(0) 
+589c469
+<       TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("Dntuple_finder_PbPb_1111.root_1104.root");
+---
+>       TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("Ds_phikkpi_pt4.root");
+591c471
+<          f = new TFile("Dntuple_finder_PbPb_1111.root_1104.root");
+---
+>          f = new TFile("Ds_phikkpi_pt4.root");
+599c479
+< ntDs_Class::~ntDs_Class()
+---
+> ntDsMC_Class::~ntDsMC_Class()
+605c485
+< Int_t ntDs_Class::GetEntry(Long64_t entry)
+---
+> Int_t ntDsMC_Class::GetEntry(Long64_t entry)
+611c491
+< Long64_t ntDs_Class::LoadTree(Long64_t entry)
+---
+> Long64_t ntDsMC_Class::LoadTree(Long64_t entry)
+624c504
+< void ntDs_Class::Init(TTree *tree)
+---
+> void ntDsMC_Class::Init(TTree *tree)
+651,664d530
+<    fChain->SetBranchAddress("PVxE", &PVxE, &b_PVxE);
+<    fChain->SetBranchAddress("PVyE", &PVyE, &b_PVyE);
+<    fChain->SetBranchAddress("PVzE", &PVzE, &b_PVzE);
+<    fChain->SetBranchAddress("BSxErr", &BSxErr, &b_BSxErr);
+<    fChain->SetBranchAddress("BSyErr", &BSyErr, &b_BSyErr);
+<    fChain->SetBranchAddress("BSzErr", &BSzErr, &b_BSzErr);
+<    fChain->SetBranchAddress("BSdxdz", &BSdxdz, &b_BSdxdz);
+<    fChain->SetBranchAddress("BSdydz", &BSdydz, &b_BSdydz);
+<    fChain->SetBranchAddress("BSdxdzErr", &BSdxdzErr, &b_BSdxdzErr);
+<    fChain->SetBranchAddress("BSdydzErr", &BSdydzErr, &b_BSdydzErr);
+<    fChain->SetBranchAddress("BSWidthX", &BSWidthX, &b_BSWidthX);
+<    fChain->SetBranchAddress("BSWidthXErr", &BSWidthXErr, &b_BSWidthXErr);
+<    fChain->SetBranchAddress("BSWidthY", &BSWidthY, &b_BSWidthY);
+<    fChain->SetBranchAddress("BSWidthYErr", &BSWidthYErr, &b_BSWidthYErr);
+772,803d637
+<    fChain->SetBranchAddress("Dtrk1Y", Dtrk1Y, &b_Dtrk1Y);
+<    fChain->SetBranchAddress("Dtrk2Y", Dtrk2Y, &b_Dtrk2Y);
+<    fChain->SetBranchAddress("Dtrk1D0", Dtrk1D0, &b_Dtrk1D0);
+<    fChain->SetBranchAddress("Dtrk2D0", Dtrk2D0, &b_Dtrk2D0);
+<    fChain->SetBranchAddress("Dtrk1D0Err", Dtrk1D0Err, &b_Dtrk1D0Err);
+<    fChain->SetBranchAddress("Dtrk2D0Err", Dtrk2D0Err, &b_Dtrk2D0Err);
+<    fChain->SetBranchAddress("Dtrk1Quality", Dtrk1Quality, &b_Dtrk1Quality);
+<    fChain->SetBranchAddress("Dtrk2Quality", Dtrk2Quality, &b_Dtrk2Quality);
+<    fChain->SetBranchAddress("Dtrk1Idx", Dtrk1Idx, &b_Dtrk1Idx);
+<    fChain->SetBranchAddress("Dtrk2Idx", Dtrk2Idx, &b_Dtrk2Idx);
+<    fChain->SetBranchAddress("Dtrk1EtaErr", Dtrk1EtaErr, &b_Dtrk1EtaErr);
+<    fChain->SetBranchAddress("Dtrk2EtaErr", Dtrk2EtaErr, &b_Dtrk2EtaErr);
+<    fChain->SetBranchAddress("Dtrk1PhiErr", Dtrk1PhiErr, &b_Dtrk1PhiErr);
+<    fChain->SetBranchAddress("Dtrk2PhiErr", Dtrk2PhiErr, &b_Dtrk2PhiErr);
+<    fChain->SetBranchAddress("Dtrk1MVAVal", Dtrk1MVAVal, &b_Dtrk1MVAVal);
+<    fChain->SetBranchAddress("Dtrk2MVAVal", Dtrk2MVAVal, &b_Dtrk2MVAVal);
+<    fChain->SetBranchAddress("Dtrk3Y", Dtrk3Y, &b_Dtrk3Y);
+<    fChain->SetBranchAddress("Dtrk4Y", Dtrk4Y, &b_Dtrk4Y);
+<    fChain->SetBranchAddress("Dtrk3D0", Dtrk3D0, &b_Dtrk3D0);
+<    fChain->SetBranchAddress("Dtrk4D0", Dtrk4D0, &b_Dtrk4D0);
+<    fChain->SetBranchAddress("Dtrk3D0Err", Dtrk3D0Err, &b_Dtrk3D0Err);
+<    fChain->SetBranchAddress("Dtrk4D0Err", Dtrk4D0Err, &b_Dtrk4D0Err);
+<    fChain->SetBranchAddress("Dtrk3Quality", Dtrk3Quality, &b_Dtrk3Quality);
+<    fChain->SetBranchAddress("Dtrk4Quality", Dtrk4Quality, &b_Dtrk4Quality);
+<    fChain->SetBranchAddress("Dtrk3Idx", Dtrk3Idx, &b_Dtrk3Idx);
+<    fChain->SetBranchAddress("Dtrk4Idx", Dtrk4Idx, &b_Dtrk4Idx);
+<    fChain->SetBranchAddress("Dtrk3EtaErr", Dtrk3EtaErr, &b_Dtrk3EtaErr);
+<    fChain->SetBranchAddress("Dtrk4EtaErr", Dtrk4EtaErr, &b_Dtrk4EtaErr);
+<    fChain->SetBranchAddress("Dtrk3PhiErr", Dtrk3PhiErr, &b_Dtrk3PhiErr);
+<    fChain->SetBranchAddress("Dtrk4PhiErr", Dtrk4PhiErr, &b_Dtrk4PhiErr);
+<    fChain->SetBranchAddress("Dtrk3MVAVal", Dtrk3MVAVal, &b_Dtrk3MVAVal);
+<    fChain->SetBranchAddress("Dtrk4MVAVal", Dtrk4MVAVal, &b_Dtrk4MVAVal);
+878,893d711
+<    fChain->SetBranchAddress("DRestrk1Y", DRestrk1Y, &b_DRestrk1Y);
+<    fChain->SetBranchAddress("DRestrk2Y", DRestrk2Y, &b_DRestrk2Y);
+<    fChain->SetBranchAddress("DRestrk3Y", DRestrk3Y, &b_DRestrk3Y);
+<    fChain->SetBranchAddress("DRestrk4Y", DRestrk4Y, &b_DRestrk4Y);
+<    fChain->SetBranchAddress("DRestrk1D0", DRestrk1D0, &b_DRestrk1D0);
+<    fChain->SetBranchAddress("DRestrk2D0", DRestrk2D0, &b_DRestrk2D0);
+<    fChain->SetBranchAddress("DRestrk3D0", DRestrk3D0, &b_DRestrk3D0);
+<    fChain->SetBranchAddress("DRestrk4D0", DRestrk4D0, &b_DRestrk4D0);
+<    fChain->SetBranchAddress("DRestrk1D0Err", DRestrk1D0Err, &b_DRestrk1D0Err);
+<    fChain->SetBranchAddress("DRestrk2D0Err", DRestrk2D0Err, &b_DRestrk2D0Err);
+<    fChain->SetBranchAddress("DRestrk3D0Err", DRestrk3D0Err, &b_DRestrk3D0Err);
+<    fChain->SetBranchAddress("DRestrk4D0Err", DRestrk4D0Err, &b_DRestrk4D0Err);
+<    fChain->SetBranchAddress("DRestrk1Quality", DRestrk1Quality, &b_DRestrk1Quality);
+<    fChain->SetBranchAddress("DRestrk2Quality", DRestrk2Quality, &b_DRestrk2Quality);
+<    fChain->SetBranchAddress("DRestrk3Quality", DRestrk3Quality, &b_DRestrk3Quality);
+<    fChain->SetBranchAddress("DRestrk4Quality", DRestrk4Quality, &b_DRestrk4Quality);
+894a713
+>    fChain->SetBranchAddress("DsGen", DsGen, &b_DsGen);
+896a716
+>    fChain->SetBranchAddress("DgenMass", DgenMass, &b_DgenMass);
+914c734
+< Bool_t ntDs_Class::Notify()
+---
+> Bool_t ntDsMC_Class::Notify()
+925c745
+< void ntDs_Class::Show(Long64_t entry)
+---
+> void ntDsMC_Class::Show(Long64_t entry)
+932c752
+< Int_t ntDs_Class::Cut(Long64_t entry)
+---
+> Int_t ntDsMC_Class::Cut(Long64_t entry)
+939c759
+< #endif // #ifdef ntDs_Class_cxx
+---
+> #endif // #ifdef ntDsMC_Class_cxx

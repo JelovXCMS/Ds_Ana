@@ -1,0 +1,312 @@
+//////////////////////////////////////////////////////////
+// This class has been automatically generated on
+// Thu Mar  1 17:33:30 2018 by ROOT version 6.02/13
+// from TTree ntGen/
+// found on file: Ds_phikkpi_pt4.root
+//////////////////////////////////////////////////////////
+
+#ifndef ntGenMC_class_h
+#define ntGenMC_class_h
+
+#include <TROOT.h>
+#include <TChain.h>
+#include <TFile.h>
+
+// Header file for the classes stored in the TTree if any.
+
+class ntGenMC_class {
+public :
+   TTree          *fChain;   //!pointer to the analyzed TTree or TChain
+   Int_t           fCurrent; //!current Tree number in a TChain
+
+// Fixed size dimensions of array or collections stored in the TTree if any.
+
+   // Declaration of leaf types
+   Float_t         GPVx;
+   Float_t         GPVy;
+   Float_t         GPVz;
+   Int_t           Gsize;
+   Float_t         Gy[17];   //[Gsize]
+   Float_t         Geta[17];   //[Gsize]
+   Float_t         Gphi[17];   //[Gsize]
+   Float_t         Gpt[17];   //[Gsize]
+   Float_t         Gpt[17];   //[Gsize]
+   Float_t         Gmass[17];   //[Gsize]
+   Int_t           GpdgId[17];   //[Gsize]
+   Int_t           GcollisionId[17];   //[Gsize]
+   Int_t           GisSignal[17];   //[Gsize]
+   Int_t           GSignalType[17];   //[Gsize]
+   Float_t         GBAncestorpt[17];   //[Gsize]
+   Int_t           GBAncestorpdgId[17];   //[Gsize]
+   Int_t           GfromgenPV[17];   //[Gsize]
+   Float_t         GprodvtxX[17];   //[Gsize]
+   Float_t         GprodvtxY[17];   //[Gsize]
+   Float_t         GprodvtxZ[17];   //[Gsize]
+   Float_t         GdecayvtxX[17];   //[Gsize]
+   Float_t         GdecayvtxY[17];   //[Gsize]
+   Float_t         GdecayvtxZ[17];   //[Gsize]
+   Float_t         Gtk1pt[17];   //[Gsize]
+   Float_t         Gtk1mass[17];   //[Gsize]
+   Float_t         Gtk1eta[17];   //[Gsize]
+   Float_t         Gtk1y[17];   //[Gsize]
+   Float_t         Gtk1phi[17];   //[Gsize]
+   Int_t           Gtk1pdgId[17];   //[Gsize]
+   Float_t         Gtk2pt[17];   //[Gsize]
+   Float_t         Gtk2mass[17];   //[Gsize]
+   Float_t         Gtk2eta[17];   //[Gsize]
+   Float_t         Gtk2y[17];   //[Gsize]
+   Float_t         Gtk2phi[17];   //[Gsize]
+   Int_t           Gtk2pdgId[17];   //[Gsize]
+   Float_t         Gtk3pt[17];   //[Gsize]
+   Float_t         Gtk3eta[17];   //[Gsize]
+   Float_t         Gtk3y[17];   //[Gsize]
+   Float_t         Gtk3phi[17];   //[Gsize]
+   Int_t           Gtk3pdgId[17];   //[Gsize]
+   Float_t         Gtk4pt[17];   //[Gsize]
+   Float_t         Gtk4eta[17];   //[Gsize]
+   Float_t         Gtk4y[17];   //[Gsize]
+   Float_t         Gtk4phi[17];   //[Gsize]
+   Float_t         GRestk1pt[17];   //[Gsize]
+   Float_t         GRestk1eta[17];   //[Gsize]
+   Float_t         GRestk1y[17];   //[Gsize]
+   Float_t         GRestk1phi[17];   //[Gsize]
+   Int_t           GRestk1pdgId[17];   //[Gsize]
+   Float_t         GRestk2pt[17];   //[Gsize]
+   Float_t         GRestk2eta[17];   //[Gsize]
+   Float_t         GRestk2y[17];   //[Gsize]
+   Float_t         GRestk2phi[17];   //[Gsize]
+   Int_t           GRestk2pdgId[17];   //[Gsize]
+   Float_t         GRestk3pt[17];   //[Gsize]
+   Float_t         GRestk3eta[17];   //[Gsize]
+   Float_t         GRestk3y[17];   //[Gsize]
+   Float_t         GRestk3phi[17];   //[Gsize]
+   Float_t         GRestk4pt[17];   //[Gsize]
+   Float_t         GRestk4eta[17];   //[Gsize]
+   Float_t         GRestk4y[17];   //[Gsize]
+   Float_t         GRestk4phi[17];   //[Gsize]
+
+   // List of branches
+   TBranch        *b_GPVx;   //!
+   TBranch        *b_GPVy;   //!
+   TBranch        *b_GPVz;   //!
+   TBranch        *b_Gsize;   //!
+   TBranch        *b_Gy;   //!
+   TBranch        *b_Geta;   //!
+   TBranch        *b_Gphi;   //!
+   TBranch        *b_Gpt;   //!
+   TBranch        *b_Gpt;   //!
+   TBranch        *b_Gmass;   //!
+   TBranch        *b_GpdgId;   //!
+   TBranch        *b_GcollisionId;   //!
+   TBranch        *b_GisSignal;   //!
+   TBranch        *b_GSignalType;   //!
+   TBranch        *b_GBAncestorpt;   //!
+   TBranch        *b_GBAncestorpdgId;   //!
+   TBranch        *b_GfromgenPV;   //!
+   TBranch        *b_GprodvtxX;   //!
+   TBranch        *b_GprodvtxY;   //!
+   TBranch        *b_GprodvtxZ;   //!
+   TBranch        *b_GdecayvtxX;   //!
+   TBranch        *b_GdecayvtxY;   //!
+   TBranch        *b_GdecayvtxZ;   //!
+   TBranch        *b_Gtk1pt;   //!
+   TBranch        *b_Gtk1mass;   //!
+   TBranch        *b_Gtk1eta;   //!
+   TBranch        *b_Gtk1y;   //!
+   TBranch        *b_Gtk1phi;   //!
+   TBranch        *b_Gtk1pdgId;   //!
+   TBranch        *b_Gtk2pt;   //!
+   TBranch        *b_Gtk2mass;   //!
+   TBranch        *b_Gtk2eta;   //!
+   TBranch        *b_Gtk2y;   //!
+   TBranch        *b_Gtk2phi;   //!
+   TBranch        *b_Gtk2pdgId;   //!
+   TBranch        *b_Gtk3pt;   //!
+   TBranch        *b_Gtk3eta;   //!
+   TBranch        *b_Gtk3y;   //!
+   TBranch        *b_Gtk3phi;   //!
+   TBranch        *b_Gtk3pdgId;   //!
+   TBranch        *b_Gtk4pt;   //!
+   TBranch        *b_Gtk4eta;   //!
+   TBranch        *b_Gtk4y;   //!
+   TBranch        *b_Gtk4phi;   //!
+   TBranch        *b_GRestk1pt;   //!
+   TBranch        *b_GRestk1eta;   //!
+   TBranch        *b_GRestk1y;   //!
+   TBranch        *b_GRestk1phi;   //!
+   TBranch        *b_GRestk1pdgId;   //!
+   TBranch        *b_GRestk2pt;   //!
+   TBranch        *b_GRestk2eta;   //!
+   TBranch        *b_GRestk2y;   //!
+   TBranch        *b_GRestk2phi;   //!
+   TBranch        *b_GRestk2pdgId;   //!
+   TBranch        *b_GRestk3pt;   //!
+   TBranch        *b_GRestk3eta;   //!
+   TBranch        *b_GRestk3y;   //!
+   TBranch        *b_GRestk3phi;   //!
+   TBranch        *b_GRestk4pt;   //!
+   TBranch        *b_GRestk4eta;   //!
+   TBranch        *b_GRestk4y;   //!
+   TBranch        *b_GRestk4phi;   //!
+
+   ntGenMC_class(TTree *tree=0);
+   virtual ~ntGenMC_class();
+   virtual Int_t    Cut(Long64_t entry);
+   virtual Int_t    GetEntry(Long64_t entry);
+   virtual Long64_t LoadTree(Long64_t entry);
+   virtual void     Init(TTree *tree);
+   virtual void     Loop();
+   virtual Bool_t   Notify();
+   virtual void     Show(Long64_t entry = -1);
+};
+
+#endif
+
+#ifdef ntGenMC_class_cxx
+ntGenMC_class::ntGenMC_class(TTree *tree) : fChain(0) 
+{
+// if parameter tree is not specified (or zero), connect the file
+// used to generate this class and read the Tree.
+   if (tree == 0) {
+      TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("Ds_phikkpi_pt4.root");
+      if (!f || !f->IsOpen()) {
+         f = new TFile("Ds_phikkpi_pt4.root");
+      }
+      f->GetObject("ntGen",tree);
+
+   }
+   Init(tree);
+}
+
+ntGenMC_class::~ntGenMC_class()
+{
+   if (!fChain) return;
+   delete fChain->GetCurrentFile();
+}
+
+Int_t ntGenMC_class::GetEntry(Long64_t entry)
+{
+// Read contents of entry.
+   if (!fChain) return 0;
+   return fChain->GetEntry(entry);
+}
+Long64_t ntGenMC_class::LoadTree(Long64_t entry)
+{
+// Set the environment to read one entry
+   if (!fChain) return -5;
+   Long64_t centry = fChain->LoadTree(entry);
+   if (centry < 0) return centry;
+   if (fChain->GetTreeNumber() != fCurrent) {
+      fCurrent = fChain->GetTreeNumber();
+      Notify();
+   }
+   return centry;
+}
+
+void ntGenMC_class::Init(TTree *tree)
+{
+   // The Init() function is called when the selector needs to initialize
+   // a new tree or chain. Typically here the branch addresses and branch
+   // pointers of the tree will be set.
+   // It is normally not necessary to make changes to the generated
+   // code, but the routine can be extended by the user if needed.
+   // Init() will be called many times when running on PROOF
+   // (once per file to be processed).
+
+   // Set branch addresses and branch pointers
+   if (!tree) return;
+   fChain = tree;
+   fCurrent = -1;
+   fChain->SetMakeClass(1);
+
+   fChain->SetBranchAddress("GPVx", &GPVx, &b_GPVx);
+   fChain->SetBranchAddress("GPVy", &GPVy, &b_GPVy);
+   fChain->SetBranchAddress("GPVz", &GPVz, &b_GPVz);
+   fChain->SetBranchAddress("Gsize", &Gsize, &b_Gsize);
+   fChain->SetBranchAddress("Gy", Gy, &b_Gy);
+   fChain->SetBranchAddress("Geta", Geta, &b_Geta);
+   fChain->SetBranchAddress("Gphi", Gphi, &b_Gphi);
+   fChain->SetBranchAddress("Gpt", Gpt, &b_Gpt);
+//    fChain->SetBranchAddress("Gpt", Gpt, &b_Gpt);
+   fChain->SetBranchAddress("Gmass", Gmass, &b_Gmass);
+   fChain->SetBranchAddress("GpdgId", GpdgId, &b_GpdgId);
+   fChain->SetBranchAddress("GcollisionId", GcollisionId, &b_GcollisionId);
+   fChain->SetBranchAddress("GisSignal", GisSignal, &b_GisSignal);
+   fChain->SetBranchAddress("GSignalType", GSignalType, &b_GSignalType);
+   fChain->SetBranchAddress("GBAncestorpt", GBAncestorpt, &b_GBAncestorpt);
+   fChain->SetBranchAddress("GBAncestorpdgId", GBAncestorpdgId, &b_GBAncestorpdgId);
+   fChain->SetBranchAddress("GfromgenPV", GfromgenPV, &b_GfromgenPV);
+   fChain->SetBranchAddress("GprodvtxX", GprodvtxX, &b_GprodvtxX);
+   fChain->SetBranchAddress("GprodvtxY", GprodvtxY, &b_GprodvtxY);
+   fChain->SetBranchAddress("GprodvtxZ", GprodvtxZ, &b_GprodvtxZ);
+   fChain->SetBranchAddress("GdecayvtxX", GdecayvtxX, &b_GdecayvtxX);
+   fChain->SetBranchAddress("GdecayvtxY", GdecayvtxY, &b_GdecayvtxY);
+   fChain->SetBranchAddress("GdecayvtxZ", GdecayvtxZ, &b_GdecayvtxZ);
+   fChain->SetBranchAddress("Gtk1pt", Gtk1pt, &b_Gtk1pt);
+   fChain->SetBranchAddress("Gtk1mass", Gtk1mass, &b_Gtk1mass);
+   fChain->SetBranchAddress("Gtk1eta", Gtk1eta, &b_Gtk1eta);
+   fChain->SetBranchAddress("Gtk1y", Gtk1y, &b_Gtk1y);
+   fChain->SetBranchAddress("Gtk1phi", Gtk1phi, &b_Gtk1phi);
+   fChain->SetBranchAddress("Gtk1pdgId", Gtk1pdgId, &b_Gtk1pdgId);
+   fChain->SetBranchAddress("Gtk2pt", Gtk2pt, &b_Gtk2pt);
+   fChain->SetBranchAddress("Gtk2mass", Gtk2mass, &b_Gtk2mass);
+   fChain->SetBranchAddress("Gtk2eta", Gtk2eta, &b_Gtk2eta);
+   fChain->SetBranchAddress("Gtk2y", Gtk2y, &b_Gtk2y);
+   fChain->SetBranchAddress("Gtk2phi", Gtk2phi, &b_Gtk2phi);
+   fChain->SetBranchAddress("Gtk2pdgId", Gtk2pdgId, &b_Gtk2pdgId);
+   fChain->SetBranchAddress("Gtk3pt", Gtk3pt, &b_Gtk3pt);
+   fChain->SetBranchAddress("Gtk3eta", Gtk3eta, &b_Gtk3eta);
+   fChain->SetBranchAddress("Gtk3y", Gtk3y, &b_Gtk3y);
+   fChain->SetBranchAddress("Gtk3phi", Gtk3phi, &b_Gtk3phi);
+   fChain->SetBranchAddress("Gtk3pdgId", Gtk3pdgId, &b_Gtk3pdgId);
+   fChain->SetBranchAddress("Gtk4pt", Gtk4pt, &b_Gtk4pt);
+   fChain->SetBranchAddress("Gtk4eta", Gtk4eta, &b_Gtk4eta);
+   fChain->SetBranchAddress("Gtk4y", Gtk4y, &b_Gtk4y);
+   fChain->SetBranchAddress("Gtk4phi", Gtk4phi, &b_Gtk4phi);
+   fChain->SetBranchAddress("GRestk1pt", GRestk1pt, &b_GRestk1pt);
+   fChain->SetBranchAddress("GRestk1eta", GRestk1eta, &b_GRestk1eta);
+   fChain->SetBranchAddress("GRestk1y", GRestk1y, &b_GRestk1y);
+   fChain->SetBranchAddress("GRestk1phi", GRestk1phi, &b_GRestk1phi);
+   fChain->SetBranchAddress("GRestk1pdgId", GRestk1pdgId, &b_GRestk1pdgId);
+   fChain->SetBranchAddress("GRestk2pt", GRestk2pt, &b_GRestk2pt);
+   fChain->SetBranchAddress("GRestk2eta", GRestk2eta, &b_GRestk2eta);
+   fChain->SetBranchAddress("GRestk2y", GRestk2y, &b_GRestk2y);
+   fChain->SetBranchAddress("GRestk2phi", GRestk2phi, &b_GRestk2phi);
+   fChain->SetBranchAddress("GRestk2pdgId", GRestk2pdgId, &b_GRestk2pdgId);
+   fChain->SetBranchAddress("GRestk3pt", GRestk3pt, &b_GRestk3pt);
+   fChain->SetBranchAddress("GRestk3eta", GRestk3eta, &b_GRestk3eta);
+   fChain->SetBranchAddress("GRestk3y", GRestk3y, &b_GRestk3y);
+   fChain->SetBranchAddress("GRestk3phi", GRestk3phi, &b_GRestk3phi);
+   fChain->SetBranchAddress("GRestk4pt", GRestk4pt, &b_GRestk4pt);
+   fChain->SetBranchAddress("GRestk4eta", GRestk4eta, &b_GRestk4eta);
+   fChain->SetBranchAddress("GRestk4y", GRestk4y, &b_GRestk4y);
+   fChain->SetBranchAddress("GRestk4phi", GRestk4phi, &b_GRestk4phi);
+   Notify();
+}
+
+Bool_t ntGenMC_class::Notify()
+{
+   // The Notify() function is called when a new file is opened. This
+   // can be either for a new TTree in a TChain or when when a new TTree
+   // is started when using PROOF. It is normally not necessary to make changes
+   // to the generated code, but the routine can be extended by the
+   // user if needed. The return value is currently not used.
+
+   return kTRUE;
+}
+
+void ntGenMC_class::Show(Long64_t entry)
+{
+// Print contents of entry.
+// If entry is not specified, print current entry
+   if (!fChain) return;
+   fChain->Show(entry);
+}
+Int_t ntGenMC_class::Cut(Long64_t entry)
+{
+// This function may be called from Loop.
+// returns  1 if entry is accepted.
+// returns -1 otherwise.
+   return 1;
+}
+#endif // #ifdef ntGenMC_class_cxx

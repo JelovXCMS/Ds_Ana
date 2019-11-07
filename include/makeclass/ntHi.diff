@@ -1,0 +1,146 @@
+3c3
+< // Thu Mar  1 17:34:11 2018 by ROOT version 6.02/13
+---
+> // Mon Feb 26 17:54:32 2018 by ROOT version 6.02/13
+5c5
+< // found on file: Ds_phikkpi_pt4.root
+---
+> // found on file: Dntuple_finder_PbPb_1111.root_1104.root
+8,9c8,9
+< #ifndef ntHiMC_class_h
+< #define ntHiMC_class_h
+---
+> #ifndef ntHi_class_h
+> #define ntHi_class_h
+16,19d15
+< #include "vector"
+< #include "vector"
+< #include "vector"
+< #include "vector"
+21c17
+< class ntHiMC_class {
+---
+> class ntHi_class {
+35,54d30
+<    Int_t           ProcessID;
+<    Float_t         pthat;
+<    Float_t         weight;
+<    Float_t         alphaQCD;
+<    Float_t         alphaQED;
+<    Float_t         qScale;
+<    Int_t           nMEPartons;
+<    Int_t           nMEPartonsFiltered;
+<  //pair<int,int>   *pdfID;
+<    Int_t           first;
+<    Int_t           second;
+<  //pair<float,float> *pdfX;
+<    Float_t         first;
+<    Float_t         second;
+<  //pair<float,float> *pdfXpdf;
+<    Float_t         first;
+<    Float_t         second;
+<    vector<float>   *ttbar_w;
+<    vector<int>     *npus;
+<    vector<float>   *tnpus;
+77a54,55
+>    Int_t           hiNevtPlane;
+>    Float_t         hiEvtPlanes[29];   //[hiNevtPlane]
+86,102d63
+<    TBranch        *b_ProcessID;   //!
+<    TBranch        *b_pthat;   //!
+<    TBranch        *b_weight;   //!
+<    TBranch        *b_alphaQCD;   //!
+<    TBranch        *b_alphaQED;   //!
+<    TBranch        *b_qScale;   //!
+<    TBranch        *b_nMEPartons;   //!
+<    TBranch        *b_nMEPartonsFiltered;   //!
+<    TBranch        *b_pdfID_first;   //!
+<    TBranch        *b_pdfID_second;   //!
+<    TBranch        *b_pdfX_first;   //!
+<    TBranch        *b_pdfX_second;   //!
+<    TBranch        *b_pdfXpdf_first;   //!
+<    TBranch        *b_pdfXpdf_second;   //!
+<    TBranch        *b_ttbar_w;   //!
+<    TBranch        *b_npus;   //!
+<    TBranch        *b_tnpus;   //!
+125a87,88
+>    TBranch        *b_hiNevtPlane;   //!
+>    TBranch        *b_hiEvtPlanes;   //!
+127,128c90,91
+<    ntHiMC_class(TTree *tree=0);
+<    virtual ~ntHiMC_class();
+---
+>    ntHi_class(TTree *tree=0);
+>    virtual ~ntHi_class();
+140,141c103,104
+< #ifdef ntHiMC_class_cxx
+< ntHiMC_class::ntHiMC_class(TTree *tree) : fChain(0) 
+---
+> #ifdef ntHi_class_cxx
+> ntHi_class::ntHi_class(TTree *tree) : fChain(0) 
+146c109
+<       TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("Ds_phikkpi_pt4.root");
+---
+>       TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("Dntuple_finder_PbPb_1111.root_1104.root");
+148c111
+<          f = new TFile("Ds_phikkpi_pt4.root");
+---
+>          f = new TFile("Dntuple_finder_PbPb_1111.root_1104.root");
+156c119
+< ntHiMC_class::~ntHiMC_class()
+---
+> ntHi_class::~ntHi_class()
+162c125
+< Int_t ntHiMC_class::GetEntry(Long64_t entry)
+---
+> Int_t ntHi_class::GetEntry(Long64_t entry)
+168c131
+< Long64_t ntHiMC_class::LoadTree(Long64_t entry)
+---
+> Long64_t ntHi_class::LoadTree(Long64_t entry)
+181c144
+< void ntHiMC_class::Init(TTree *tree)
+---
+> void ntHi_class::Init(TTree *tree)
+191,194d153
+<    // Set object pointer
+<    ttbar_w = 0;
+<    npus = 0;
+<    tnpus = 0;
+207,223d165
+<    fChain->SetBranchAddress("ProcessID", &ProcessID, &b_ProcessID);
+<    fChain->SetBranchAddress("pthat", &pthat, &b_pthat);
+<    fChain->SetBranchAddress("weight", &weight, &b_weight);
+<    fChain->SetBranchAddress("alphaQCD", &alphaQCD, &b_alphaQCD);
+<    fChain->SetBranchAddress("alphaQED", &alphaQED, &b_alphaQED);
+<    fChain->SetBranchAddress("qScale", &qScale, &b_qScale);
+<    fChain->SetBranchAddress("nMEPartons", &nMEPartons, &b_nMEPartons);
+<    fChain->SetBranchAddress("nMEPartonsFiltered", &nMEPartonsFiltered, &b_nMEPartonsFiltered);
+<    fChain->SetBranchAddress("first", &first, &b_pdfID_first);
+<    fChain->SetBranchAddress("second", &second, &b_pdfID_second);
+< //    fChain->SetBranchAddress("first", &first, &b_pdfX_first);
+< //    fChain->SetBranchAddress("second", &second, &b_pdfX_second);
+< //    fChain->SetBranchAddress("first", &first, &b_pdfXpdf_first);
+< //    fChain->SetBranchAddress("second", &second, &b_pdfXpdf_second);
+<    fChain->SetBranchAddress("ttbar_w", &ttbar_w, &b_ttbar_w);
+<    fChain->SetBranchAddress("npus", &npus, &b_npus);
+<    fChain->SetBranchAddress("tnpus", &tnpus, &b_tnpus);
+246a189,190
+>    fChain->SetBranchAddress("hiNevtPlane", &hiNevtPlane, &b_hiNevtPlane);
+>    fChain->SetBranchAddress("hiEvtPlanes", hiEvtPlanes, &b_hiEvtPlanes);
+250c194
+< Bool_t ntHiMC_class::Notify()
+---
+> Bool_t ntHi_class::Notify()
+261c205
+< void ntHiMC_class::Show(Long64_t entry)
+---
+> void ntHi_class::Show(Long64_t entry)
+268c212
+< Int_t ntHiMC_class::Cut(Long64_t entry)
+---
+> Int_t ntHi_class::Cut(Long64_t entry)
+275c219
+< #endif // #ifdef ntHiMC_class_cxx
+---
+> #endif // #ifdef ntHi_class_cxx

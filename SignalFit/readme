@@ -1,0 +1,46 @@
+Latest code  to run :
+//SignalFit_fixShapeCutScan.C (180129)
+
+SignalFit_fixShapeCutScanV3.C (190923_approvalFreeze)
+
+--
+
+run signalFit.C bin by bin
+summarize result : ResultSum.C
+dca fit: PNPDcaFit.C
+
+
+running note:
+some part of code need to run with root.6.10 or later,
+run CMSenvNew before running this code
+
+
+
+
+
+-----------------------------------------------------------
+
+good reference of roofit tutorails:
+
+1.import tree data and apply cuts : 
+https://root.cern.ch/doc/v608/rf401__importttreethx_8C.html 
+https://root.cern.ch/doc/v608/rf402__datahandling_8C.html
+
+
+2.fitresult save and read :
+https://root.cern.ch/doc/v608/rf607__fitresult_8C.html
+https://root.cern.ch/doc/v608/rf608__fitresultaspdf_8C.html
+
+3.MC study
+https://root.cern.ch/doc/v608/rf801__mcstudy_8C.html
+http://roofit.sourceforge.net/docs/tutorial/fitgen/roofit_tutorial_fitgen.pdf
+an simeple example code from Camelia is in the subfolder
+
+
+4. about chebyshev : roofit use chebyshev irst kind : http://mathworld.wolfram.com/ChebyshevPolynomialoftheFirstKind.html
+= 1+ sum(1,n)AiTi, so a 3rd order chebyshev would only have three parameter in roofit (just like simple polynimial, no zero order term parameter)
+root default has chebyshev function , can be called by like :
+TF1 * f = (TF1*) gROOT->GetFunction("chebyshev4");
+
+
+

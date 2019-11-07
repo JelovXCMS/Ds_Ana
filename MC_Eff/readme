@@ -1,0 +1,11 @@
+
+The Latest ver : KK MC width scale to data (include DdlErrScale) && apply Dalpha weight
+	MC_EffCalLoop_KKScale.C
+
+
+The ApprovalFreeze ver : 
+	MC_EffCalLoop_DdlErrScale.C 
+	run_DdlErrScale.sh
+	This contains DdlErrScale from ARC meeting request.
+
+	

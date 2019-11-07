@@ -1,0 +1,3 @@
+copy one by one works,
+
+actually could copy everything , just need to set -t and -T in gfal-copy to extend time limit

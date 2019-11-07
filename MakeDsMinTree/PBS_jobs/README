@@ -1,0 +1,10 @@
+
+run at purdue halstead note:
+
+halstead cannot directly read file under /mnt/hadoop/
+need to read via CMS proxy
+
+1. export X509_USER_PROXY=/home/peng43/.myproxy
+2. voms-proxy-init --voms cms --valid 168:00 (or myproxy with my setting), with previous X509_USER_PROXY setup , this will generate new .myproxy file
+
+then run source ./submit_pbs.sh

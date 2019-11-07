@@ -1,0 +1,40 @@
+
+## usage :  first run readFONLL.C to get FONLL and Raa predictions, then run getFONLLweight.C 
+
+  prompt pp : (1). FONLL_D0@mtst  -exist!
+              (2). D0Data weight  : FONLL_D0*D0Data@mtst / (1) FONLL@mtst
+
+  prompt PbPb : (3). a seperate "DsRaa" term to give FONLL_D0@mtst * DsRaa - exist!
+                (4).  D0Data weight : FONLL_D0*D0Data@mtst / (1) FONLL@mtst
+
+  nonprompt (Bpt) pp : (5) FONLL_B - exist!
+                       (6) FONLL_B*D0Data
+
+  nonprompt (Bpt) PbPb : (7) TAMU Raa, to give FONLL_B* TAMU Raa -exist
+                         (8) D0Data weight , give FONLL_B* TAMU Raa *D0Data weight
+
+
+## 2 main parts of code :
+
+1.  readFONLL.C. Output : FONLL.root ; Input 
+	a. read DsRaa from PHSD. output TGraph gr_DsRaa_PHSD & TH1D h_DsRaa_PHSD (graph might be better)
+	b. read BRaaTAMU. output TH1D h_BRaa_TAMU and Gr_BRaa_TAMU 
+	c. h_FONLL_PromptD0 & h_FONLL_PromptDs_byD0MTs & h_FONLL_B , from FONLL (& with D0MTs), output in TH1D and TGraph
+	d. gr_D0Data_pp_weight & gr_D0Data_PbPb_weight : D0Data weight relative to FONLL (mtsc in Ds pt bins)
+
+
+2.	getFONLLweight.C // usage : run_getWeight.sh
+
+
+
+
+
+
+
+## other files: 
+
+FONLL_PromptD0_center.txt , FONLL_Bmeson_center.txt : text file of FONLL prediction from official site
+
+TAMUminbiasB_20170419.txt : TAMU prediction
+
+DsRaaPHSD.txt : Ds PHSD prediction

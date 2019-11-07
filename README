@@ -1,0 +1,39 @@
+// basic procedure plan , made 2018 0316
+
+pre-steps in other folder
+
+a. (Private) MC production  /home/peng43/work/Project/Ds_PbPb/CMSSW/MC_produce
+
+b. DsFiner & DsNtuple : /home/peng43/work/Project/Ds_PbPb/CMSSW/DsFinder/working_DsFinder/CMSSW_7_5_8_patch3/src/Bfinder
+
+
+0. include/ : utitlity, setbranch.h , parameters & cuts
+
+1. MakeDsMinTree/  : Generate Minimum Ds Tree for later study
+
+2. DataSample_List/ : a. store small sample of MC / the location of large DsMintree files (need to move Dntuple & other files to /mnt later to avoid file be delete in /scartch
+											b. Calculate Sample Weight
+					
+3.1 PhiMassWindowCut / :
+
+3.2 TMVA/ : cut optimization
+
+4. MC_Eff/ : calculation Prompt/NonPrompt eff for phi & f0 (&kstar), for Yield extraction, also check swap 
+
+5. BtoD_Result/ : N nonprompt D crosssection & Raa from Hao, convert to NonPrompt Ds crossection 
+
+6. BuildFitFile_FromDsMinTree/ : Build TH1 histogram (& Roofit Data tree) from DsMintree for later fitting, includes variable scan histograms
+
+7. SignalFit/ : Fitting with different fitting fuction, variable scan
+
+8. CrossSection_dNdpt/ : From previous result, get central value & statistic uncertainty
+
+9. Systematics/ : Summarize all systematic uncertainties DsPt shapes & others 
+
+10. Results_RAA/ : Final results, RAA, Ds/D0 
+
+
+11. plots/<class>/ : try to store all plots in these folder
+
+
+ps. MC_GenCal/ : get MC file size & timing

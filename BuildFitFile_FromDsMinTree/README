@@ -1,0 +1,7 @@
+one PbPb job take about 2 hours
+
+might need to consider modify code to let it split one file into mutiple jobs
+
+like njob=10, startEntry = nentries/10*ijob, endEntry=nentries/njob*(ijob+1) (-1 if not the last)
+
+the Ndiv process not work.. generate some unknown error
